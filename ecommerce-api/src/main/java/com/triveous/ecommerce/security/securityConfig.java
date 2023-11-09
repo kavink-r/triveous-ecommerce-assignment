@@ -41,6 +41,8 @@ public class securityConfig {
 			.authorizeHttpRequests(auth->{
 				auth.requestMatchers("/api/auth/**").permitAll();
 				auth.requestMatchers("/api/product/**").permitAll();
+				auth.requestMatchers("/swagger-ui/**").permitAll();
+				auth.requestMatchers("/apidoc/**").permitAll();
 				auth.anyRequest().authenticated();
 			})
 			.sessionManagement(session->{

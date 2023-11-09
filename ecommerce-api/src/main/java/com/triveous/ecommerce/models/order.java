@@ -8,8 +8,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name="cust_orders")
 public class order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

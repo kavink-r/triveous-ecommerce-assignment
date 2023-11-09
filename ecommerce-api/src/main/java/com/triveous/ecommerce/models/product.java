@@ -1,10 +1,15 @@
 package com.triveous.ecommerce.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
 public class product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int productId;
 	private String productName;
 	@ManyToOne
